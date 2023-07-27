@@ -7,9 +7,10 @@ import { IProduct } from './product.model';
   styleUrls: ['./catalog.component.css']
 })
 export class CatalogComponent {
-products : IProduct;
+// products : IProduct;
+products : IProduct[];
 constructor(){
-  this.products = 
+  this.products = [
     {
       id: 1,
       description:
@@ -39,7 +40,7 @@ constructor(){
       price: 275,
       discount: 0,
     }
-  
+  ]
 } 
 
 getImageUrl(products : IProduct){

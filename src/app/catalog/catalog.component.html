@@ -8,20 +8,20 @@
   </div>
 
   <ul class="products">
-    <li class="product-item">
+    <li class="product-item" *ngFor="let product of products">
       <div class="product">
         <div class="product-details">
           <!-- <img src="{{'/assets/images/robot-parts/' + products.imageName}}" [alt]="products.name" /> -->
           <!-- <img [src]="'/assets/images/robot-parts/' + products.imageName" [alt]="products.name" /> attribute binding -->
-          <img [src]="getImageUrl(products)" [alt]="products.name" />
+          <img [src]="getImageUrl(product)" [alt]="product.name" />
           <div class="product-info">
-            <div class="name"> {{products.name}}</div>
-            <div class="description">{{products.description}}</div>
-            <div class="category">Part Type: {{products.category}} </div>
+            <div class="name"> {{product.name}}</div>
+            <div class="description">{{product.description}}</div>
+            <div class="category">Part Type: {{product.category}} </div>
           </div>
         </div>
         <div class="price">
-          <div>{{products.price}}</div>
+          <div>₹ {{product.price}}</div>
           <button class="cta">Buy</button>
         </div>
       </div>
