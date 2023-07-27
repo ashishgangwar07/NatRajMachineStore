@@ -11,8 +11,9 @@
     <li class="product-item">
       <div class="product">
         <div class="product-details">
-          <img src="{{'/assets/images/robot-parts/' + products.imageName}}" [alt]="products.name" />
+          <!-- <img src="{{'/assets/images/robot-parts/' + products.imageName}}" [alt]="products.name" /> -->
           <!-- <img [src]="'/assets/images/robot-parts/' + products.imageName" [alt]="products.name" /> attribute binding -->
+          <img [src]="getImageUrl(products)" [alt]="products.name" />
           <div class="product-info">
             <div class="name"> {{products.name}}</div>
             <div class="description">{{products.description}}</div>

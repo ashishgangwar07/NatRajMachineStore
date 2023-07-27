@@ -41,4 +41,8 @@ constructor(){
     }
   
 } 
+
+getImageUrl(products : IProduct){
+  return '/assets/images/robot-parts/' + products.imageName;
+}
 }
